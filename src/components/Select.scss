@@ -1,0 +1,110 @@
+.select {
+  padding: 19px 3px 6px;
+  display: inline-block;
+  min-width: 240px;
+  background: #D1E7DD;
+  border-radius: 4px;
+
+  &__area {
+    width: 100%;
+    min-height: 72px;
+    border-radius: 4px;
+    background: #ffffff;
+  }
+
+  &__wrap {
+    margin-top: 4px;
+    position: relative;
+    width: 100%;
+    
+    
+    
+
+    &.active {
+      & .select__selected-text {
+        border: 1px solid #EAF2FF;
+        border-radius: 4px 4px 0 0;
+
+        & svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      & ul li {
+        border: 1px solid #EAF2FF;
+        border-top: none;
+
+        &:last-of-type {
+          border-radius: 0 0 4px 4px;
+        }
+      }
+      
+
+      
+    }
+  }
+
+  &__selected-text {
+    padding: 8px 12px;
+    border: 1px solid #479F76;
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: pointer;
+    
+    
+
+    & svg {
+      position: absolute;
+      right: 18px;
+      top: 16px;
+    }
+
+    
+  }
+
+  &__options {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 33;
+
+    &-item {
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: #ffffff;
+      border: 1px solid #37b0b0;
+      border-top: none;
+      
+      &,
+      & * {
+        cursor: pointer;
+      }
+
+      & label {
+        margin-left: 12px;
+      }
+
+      &:hover {
+        background-color: #32a6a6;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #95BEFC;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_selected {
+      background: #95BEFC;
+    }
+  }
+}
